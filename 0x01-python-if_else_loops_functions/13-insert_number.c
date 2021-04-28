@@ -18,7 +18,7 @@ listint_t *new, *first;
 first = *head;
 new = malloc(sizeof(listint_t));
 
-if (newNode == NULL)
+if (new == NULL)
 return (NULL);
 new->n = number;
 
