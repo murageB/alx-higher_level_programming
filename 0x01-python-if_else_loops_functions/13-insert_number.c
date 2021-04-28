@@ -39,7 +39,7 @@ return (new);
 }
 first = first->next;
 }
-first->next = newNode;
+first->next = new;
 new->next = NULL;
 return (new);
 }
