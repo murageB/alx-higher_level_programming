@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ Defines a class Square """
 
+
 class Square:
 
     """
     defines a geometric square
- 
+
     Attribute:
          size (int): size of square
     """
@@ -19,14 +20,14 @@ class Square:
         Raises:
             TypeError: if size is not int
             ValueError: if size is less than 0
-        """  
+        """
         if type(size) != int:
             raise TypeError("size must be an interger")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
-    
+
     def area(self):
         """
         returns the area of the square
@@ -34,13 +35,13 @@ class Square:
         Return:
             area (int) of the square
         """
-        return (self.__size ** 2)   
-    
+        return (self.__size ** 2)
+
     @property
     def size(self):
         """
         gets the size attribute
-        
+
         Return:
             size (int) of square
 
@@ -51,7 +52,7 @@ class Square:
     def size(self, value):
         """
         set size of square to value
-        
+
         Args:
             Value (int): size of a side of a square
         Raises:
@@ -67,7 +68,6 @@ class Square:
         else:
             self.__size = value
 
-        
     def my_print(self):
         """
         Prints a square from the size using '#'
