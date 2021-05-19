@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""Module Square"""
 
-""" creates an empty square class  """
+
 class Square:
+    """creates an empty square class"""
     pass
