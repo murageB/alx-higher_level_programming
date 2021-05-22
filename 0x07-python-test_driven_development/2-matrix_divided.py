@@ -35,7 +35,7 @@ def matrix_divided(matrix, div):
                                 "of integers/floats")
         for j in matrix:
             if len(j) != len(matrix[0]):
-                raise TypeError("Each row of the matrix must"
+                raise TypeError("Each row of the matrix must "
                                 "have the same size")
     for r in matrix:
         new_matrix.append(list(map(lambda x: round(x / div, 2), r)))
