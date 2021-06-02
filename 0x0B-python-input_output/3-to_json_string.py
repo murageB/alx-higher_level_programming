@@ -3,8 +3,6 @@
 Object to JSON string Module
 
 """
-
-'''Import json Module'''
 import json
 
 
