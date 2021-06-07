@@ -122,3 +122,34 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+            """
+            returns the area value of the rectangle instance
+
+            """
+            return (self.__width * self.__height)
+
+    def display(self):
+        """
+        prints in stdout the rectangle instance with
+        the character '#'
+
+        """
+        for y in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for j in range(self.__width):
+                for x in range(self.__x):
+                    print("", end="")
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """
+        returns [Rectangle](<id>)<x>/<y> - <width>/<height>
+
+        """
+        return("[Rectangle] ({}) <{}>/<{}> - <{}>/<{}>"
+               .format(self.id, self.__x, self.__y,
+                       self.__width, self.__height))
