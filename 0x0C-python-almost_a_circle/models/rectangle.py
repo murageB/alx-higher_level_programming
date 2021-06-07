@@ -150,6 +150,31 @@ class Rectangle(Base):
         returns [Rectangle](<id>)<x>/<y> - <width>/<height>
 
         """
-        return("[Rectangle] ({}) <{}>/<{}> - <{}>/<{}>"
-               .format(self.id, self.__x, self.__y,
-                       self.__width, self.__height))
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
+                                                                 self.__x,
+                                                                 self.__y,
+                                                                 self.__width,
+                                                                 self.__height)
+
+    def update(self, *args, **kwargs):
+        """
+        assigns an argument to each attribute
+
+        """
+        i = 0
+        if args:
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.__width = arg
+                elif i == 2:
+                    self.__height = arg
+                elif i == 3:
+                    self.__x = arg
+                elif i == 4:
+                    self.__y = arg
+                i += 1
+        else:
+            for arg in kwargs:
+                setattr(self, arg, kwargs.get(arg))
