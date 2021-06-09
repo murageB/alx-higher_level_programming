@@ -26,7 +26,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
@@ -44,7 +44,6 @@ class Base:
         writes the JSON string representation of list_objs to a file
 
         """
-        
         list_f = []
         with open(cls.__name__ + ".json", encoding="utf-8") as f:
             if list_objs:
